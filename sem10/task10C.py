@@ -1,3 +1,4 @@
+sz = int(input())
 data = list(map(int, input().split()))
 
 min1 = min(data)

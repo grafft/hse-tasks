@@ -1,5 +1,6 @@
-target = int(input())
+sz = int(input())
 data = list(map(int, input().split()))
+target = int(input())
 
 number = data[0]
 min_diff = abs(number - target)
