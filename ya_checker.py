@@ -7,7 +7,9 @@ from lxml.cssselect import CSSSelector
 
 # contest_id = 1671  # Seminar 9
 # contest_id = 1786 # Seminar 10
-contest_id = 1864  # Seminar 11
+#contest_id = 1864  # Seminar 11
+#contest_id = 1891  # Seminar 12
+contest_id = 1922  # Seminar 13
 
 params = ['contestId=' + str(contest_id),
           'filter0=verdict%3DAC', 'filter1=userGroupName%3Dhse-minor-15-8',
@@ -18,7 +20,7 @@ rejudge_base_url = 'https://contest.yandex.ru/admin/contest-submissions/change-v
 url = '?'.join([base_url, '&'.join(params)])
 
 cookies_dict = {
-    'Session_id': '3:1448304062.5.0.1444554362822:CnStbQ:50.0|102246374.0.2|137381.881008.B0DTtfGaTdnDEtjBAma5sdRk35U',
+    'Session_id': '3:1449970479.5.0.1444554362822:CnStbQ:50.0|102246374.0.2|138303.618942.U66lbY1G0GS6nFD9ryDDjBC9lpc',
 }
 
 sel_tr = CSSSelector('table[data-contest-id="{0}"] tr'.format(contest_id))
