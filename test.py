@@ -1,12 +1,8 @@
-import numpy as np
+from sklearn.datasets.samples_generator import make_classification
+from sklearn.svm import SVC
 
+X, y = make_classification(n_samples=50, n_features=2, n_informative=2,
+                           n_clusters_per_class=1, random_state=0)
 
-def birthday_montecarlo(n, exper_num):
-    counter = 0
-    for _ in range(0, exper_num):
-        values = np.random.randint(1, 366, size=n)
-        if len(np.unique(values)) < n: counter += 1
-    return counter / exper_num
-
-
-print(birthday_montecarlo(20, 100000))
+lin_svm = SVC(kernel='linear', C=10).fit(X, y)
+lin_svm.decision_function([[1, 0]])
